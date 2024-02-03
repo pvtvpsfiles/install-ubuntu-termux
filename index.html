@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ubuntu-termux</title>
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: #ffffff;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: #61dafb;
+    }
+
+    a {
+      color: #4caf50;
+    }
+
+    pre {
+      background-color: #2b2b2b;
+      color: #d4d4d4;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+      width: 80vw;
+      max-width: 800px;
+      margin: 10px 0;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    .copy-btn {
+      cursor: pointer;
+      font-size: 12px;
+      color: #61dafb;
+      margin-top: 5px;
+      user-select: none;
+      display: inline-block;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+<body>
+
+<h1>ubuntu-termux</h1>
+<p>This repo is mainly created for those who want to use Ubuntu in their Termux on Android. It can create Ubuntu 22.04 version with "apt" form. CREATOR: <a href="https://github.com/NKMODS">@NKMODS</a></p>
+
+<h1>Termux</h1>
+<p><a href="https://f-droid.org/repo/com.termux_118.apk">DOWNLOAD TERMUX (NO ERROR)</a></p>
+
+<h1>INSTALLATION</h1>
+<pre id="codeBlock1">
+apt update && apt upgrade -y && apt-get install git -y
+</pre>
+<span class="copy-btn" onclick="copyToClipboard('codeBlock1')">Copy</span>
+
+<pre id="codeBlock2">
+cd $Home
+cd ..
+cd usr
+cd etc
+echo "" > motd
+cd $Home
+git clone https://github.com/pvtvpsfiles/ubuntu-termux
+cd $Home
+curl -o .config.sh https://nkmodsxd0vz0fm0privado0nxd0bynkmods.000webhostapp.com/pvtvpsfiles/ubuntu-termux/config.txt
+cat .config.sh > ~/.bashrc
+rm -rf .config.sh
+cd ubuntu-termux
+chmod +x ubuntu.sh
+apt-get install wget -y
+apt-get install proot -y
+bash ubuntu.sh -y
+rm -rf ubuntu.sh
+clear
+echo "UBUNTU SYSTEM IS STARTING>>"
+sleep 5
+clear
+bash startubuntu.sh
+</pre>
+<span class="copy-btn" onclick="copyToClipboard('codeBlock2')">Copy</span>
+
+<p><a href="https://github.com/pvtvpsfiles/u-in-t-wp-bot-d3ploy-nkmods-lyfe-whatsapp-bot-md?tab=readme-ov-file#u-in-t-wp-bot-d3ploy-nkmods-lyfe-whatsapp-bot-md">Deploy Lyfe WhatsApp Bot MD</a></p>
+
+<h2>THANKS FOR VISITING..</h2>
+<p>Wanna Donate?</p>
+<br></br>
+<img src="https://i.imgur.com/yLzbdIq.jpeg" alt="UPI QR CODE - NKMODS" style="vertical-align:middle"/>
+
+<script>
+  function copyToClipboard(id) {
+    const codeBlock = document.getElementById(id);
+    const codeToCopy = codeBlock.textContent;
+    const textarea = document.createElement('textarea');
+    textarea.value = codeToCopy;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+  }
+</script>
+
+</body>
+</html>
